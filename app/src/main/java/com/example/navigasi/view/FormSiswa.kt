@@ -30,6 +30,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.navigasi.R
 
@@ -48,7 +49,7 @@ fun FormSiswa(
     Scaffold(modifier = modifier,
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(id = R.string.app_name), color = Color.White) },
+                title = { Text(stringResource(id = R.string.app_name), color = Color.White, fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(colorResource(id = R.color.purple_500))
             )
         }) { isiRuang ->
@@ -91,7 +92,7 @@ fun FormSiswa(
                                 txtGender = item
                             }
                         )
-                        Text(item)
+                        Text(item, fontWeight = FontWeight.Bold)
                     }
                 }
             }
@@ -118,7 +119,7 @@ fun FormSiswa(
                 enabled = txtAlamat.isNotEmpty(),
                 onClick = { onSubmitButtonClicked(listData) }
             ) {
-                Text(stringResource(R.string.submit))
+                Text(stringResource(R.string.submit), fontWeight = FontWeight.Bold)
             }
         }
     }

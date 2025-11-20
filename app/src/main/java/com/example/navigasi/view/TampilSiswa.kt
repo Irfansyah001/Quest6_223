@@ -40,7 +40,7 @@ fun TampilSiswa(
         modifier = Modifier,
         {
             TopAppBar(
-                title = { Text(stringResource(R.string.detail), color = Color.White) },
+                title = { Text(stringResource(R.string.detail), color = Color.White, fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(colorResource(R.color.purple_500)),
             )
         }) { isiRuang ->
@@ -54,7 +54,7 @@ fun TampilSiswa(
             ) {
                 items.forEach { item ->
                     Column {
-                        Text(item.first.uppercase(), fontSize = 16.sp)
+                        Text(item.first.uppercase(), fontSize = 16.sp, fontWeight = FontWeight.Bold)
                         Text(text = item.second, fontWeight = FontWeight.Bold, fontSize = 16.sp)
                     }
                     HorizontalDivider(thickness = dimensionResource(R.dimen.thickness_divider))
@@ -64,7 +64,7 @@ fun TampilSiswa(
                     modifier = Modifier.fillMaxWidth(),
                     onClick = onBackButtonClicked
                 ) {
-                    Text(stringResource(R.string.back))
+                    Text(stringResource(R.string.back), fontWeight = FontWeight.Bold)
                 }
             }
         }
