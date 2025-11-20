@@ -32,3 +32,11 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.navigasi.R
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun FormSiswa(
+    pilihanJK: List<String>,
+    onSubmitButtonClicked: (MutableList<String>) -> Unit,
+    modifier: Modifier = Modifier
+){
